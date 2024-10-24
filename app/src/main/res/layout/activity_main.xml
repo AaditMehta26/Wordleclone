@@ -1,0 +1,140 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/black"
+    android:padding="16dp">
+
+    <!-- Exit Button -->
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:layout_gravity="start"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/black"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wordle Game"
+        android:textSize="28sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="20dp"/>
+
+    <!-- GridLayout for showing guesses -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:rowCount="6"
+        android:columnCount="5"
+        android:layout_gravity="center"
+        android:padding="2dp">
+
+        <!-- Row 1 -->
+        <TextView android:id="@+id/cell_00" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_01" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_02" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_03" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_04" style="@style/wordleCell"/>
+
+        <!-- Row 2 -->
+        <TextView android:id="@+id/cell_10" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_11" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_12" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_13" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_14" style="@style/wordleCell"/>
+
+        <!-- Row 3 -->
+        <TextView android:id="@+id/cell_20" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_21" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_22" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_23" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_24" style="@style/wordleCell"/>
+
+        <!-- Row 4 -->
+        <TextView android:id="@+id/cell_30" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_31" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_32" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_33" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_34" style="@style/wordleCell"/>
+
+        <!-- Row 5 -->
+        <TextView android:id="@+id/cell_40" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_41" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_42" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_43" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_44" style="@style/wordleCell"/>
+
+        <!-- Row 6 -->
+        <TextView android:id="@+id/cell_50" style="@style/wordleCell"/>
+
+        <TextView
+            android:id="@+id/cell_51"
+            style="@style/wordleCell"
+            android:layout_height="80dp" />
+        <TextView android:id="@+id/cell_52" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_53" style="@style/wordleCell"/>
+        <TextView android:id="@+id/cell_54" style="@style/wordleCell"/>
+    </GridLayout>
+
+    <!-- Points Display -->
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Points: 0"
+        android:textSize="28sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_gravity="center"
+        android:paddingBottom="20dp"/>
+
+    <!-- Input Field for User Guess -->
+    <EditText
+        android:id="@+id/guessInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:hint="@string/enter_your_5_letter_guess"
+        android:inputType="text"
+        android:maxLength="5"
+
+        android:textColor="@android:color/white"
+        android:textColorHint="#F0F0F0"
+        android:textSize="18sp" />
+
+    <!-- Button to submit guess -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/black"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+    <!-- Button to proceed to next word -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+</LinearLayout>

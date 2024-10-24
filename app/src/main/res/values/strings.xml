@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">wordlegame</string>
+    <string name="enter_your_5_letter_guess">Enter your 5-letter guess</string>
+</resources>
